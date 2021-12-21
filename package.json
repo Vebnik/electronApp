@@ -1,0 +1,15 @@
+{
+  "name": "eletron_app",
+  "version": "1.0.0",
+  "description": "Electron first prj",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "electron ."
+  },
+  "author": "NikEvs",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^16.0.5"
+  }
+}
