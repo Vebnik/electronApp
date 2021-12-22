@@ -1,27 +1,36 @@
 const {app, BrowserWindow} = require('electron')
+const path = require('path')
 
-let win;
+// Абсолютный путь до директории \ файла
+const pathDir = path.join(__dirname, 'index.html')
+const pathMedia = path.join(__dirname, 'media')
+const pathJs = path.join(__dirname, 'js')
 
 function createWindow() {
 
-    win = new BrowserWindow({
+    let win = new BrowserWindow({
         width: 700,
-        height: 500
+        height: 500,
+        webPreferences: {
+            devTools: true,
+            preload: path.join(pathJs, 'preload.js'),
+        }
     });
 
-    win.loadURL('https://www.google.ru', {})
-        .then(the => console.log('-------- Load Url'))
+    win.loadFile(pathDir)
+        .then(() => console.log('Load file: ok'))
+        .catch(err => console.log(err))
 
-    win.webContents.openDevTools()
-
-    win.on(`closed`, event => {
-        win = null
-        console.log('-------- Closed process')
+    win.on(`closed`, () => {
+        app.quit()
+        console.log('Closed process')
     })
+
+    win.setIcon(path.join(pathMedia, 'mailservice.png'))
 }
 
-app.on(`ready`, event => {
-    createWindow();
-    console.log('-------- Init window')
-})
 
+app.on(`ready`, () => {
+    createWindow();
+    console.log('Init window')
+})
