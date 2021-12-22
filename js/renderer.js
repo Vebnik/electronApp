@@ -1,3 +1,3 @@
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('render.js is loaded ✔')
+    console.log('renderer.js is loaded ✔')
 })

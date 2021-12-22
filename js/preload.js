@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+    console.log('Preload.js loaded ✔')
 
     function version() {
         let id = ['chrome-version', 'electron-version', 'node-version']
@@ -9,6 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
             el.innerText = process.versions[nameProc[i]]
         }
     }
-    version();
+    // version();
 
 })

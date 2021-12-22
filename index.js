@@ -9,11 +9,13 @@ const pathJs = path.join(__dirname, 'js')
 function createWindow() {
 
     let win = new BrowserWindow({
-        width: 700,
-        height: 500,
+        width: 320,
+        height: 450,
         webPreferences: {
+            frame: false,
             devTools: true,
             preload: path.join(pathJs, 'preload.js'),
+
         }
     });
 
