@@ -1,29 +1,117 @@
 body {
+    overflow: hidden;
     padding: 0;
-    background-color: #e0dfc5;
+    background-color: #a59970;
 }
 
-#generalWin {
+.generalWin {
+    padding: 2px;
+    display: grid;
     grid-template-columns: 4fr;
     grid-template-rows: 1fr 3fr;
+    gap: 5px;
 }
 
-#mainWindow {
-    width: 100%;
-    height: 100%;
+.navBar {
+    border-radius: 1% 1% 1% 1%;
+    text-align: center;
+    background-color: #536767;
     display: grid;
-    grid-template-rows: 50px 50px 50px 50px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25px;
+    grid-template-columns: 20px 1fr 20px 1px 20px;
+    margin-bottom: 6%;
+}
+
+.header {
+    -webkit-app-region: drag;
+    background-color: #2a2525;
+}
+
+.icon {
+
+}
+
+.headerButton:hover {
+    transition-duration: 500ms;
+    background-color: #a27f7f;
+}
+
+.sep {
+    background-color: black;
+}
+
+.mainButton {
+    margin-top: 8px;
+    display: grid;
+    grid-template-rows: repeat(5, 50px);
+    grid-template-columns: repeat(3 , 1fr);
     gap: 5px;
 
 }
 
-#outputArea {
+.mainOutput {
+    text-align: center;
+    background-color: #2a2525;
+    border-radius: 2% 20px;
+    border: #536767 solid 2px;
+    display: grid;
+    grid-template-columns: 1% 99%;
+    grid-template-rows: 50% 50%;
+}
 
+.testInput {
+    position: relative;
+    top: 45%;
+    left: 38%;
+    text-align: right;
+    font-size: 19px;
+    color: #a59970;
+    font-family: 'Monoton', cursive;
+    height: 15px;
+    width: 160px;
+    background-color: transparent;
+}
+
+.clearInput {
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #384646;
+    margin: 5px;
+}
+
+.clearInput:hover {
+    background-color: #536767;
+    transition-duration: 500ms;
 }
 
 .button-win {
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'Monoton', cursive;
     background-color: #536767;
     text-align: center;
     border-radius: 5% 10px;
+    border: #2a2525 solid 2px;
+}
+.button-win:hover {
+    background-color: #a27f7f;
+    transition-duration: 500ms;
+}
+
+.button-win-op {
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'Monoton', cursive;
+    background-color: #384646;
+    text-align: center;
+    border-radius: 5% 10px;
+    border: #2a2525 solid 2px;
+}
+
+.button-win-op:hover {
+    background-color: #536767;
+    transition-duration: 500ms;
 }
