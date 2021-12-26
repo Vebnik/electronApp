@@ -55,37 +55,32 @@ body {
     border-radius: 2% 20px;
     border: #536767 solid 2px;
     display: grid;
-    grid-template-columns: 1% 99%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    grid-template-rows: 49% 2% 49%;
+}
+
+.sep2 {
+    background-color: #536767;
 }
 
 .testInput {
     position: relative;
-    top: 45%;
-    left: 38%;
     text-align: right;
     font-size: 19px;
     color: #a59970;
     font-family: 'Monoton', cursive;
-    height: 15px;
-    width: 160px;
+    width: 98%;
+    top: 35%;
+
+    border: none;
     background-color: transparent;
 }
 
-.clearInput {
-    cursor: pointer;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #384646;
-    margin: 5px;
+.quest {
+    top: 20%;
+    left: 1%;
 }
 
-.clearInput:hover {
-    background-color: #536767;
-    transition-duration: 500ms;
-}
 
 .button-win {
     cursor: pointer;
@@ -101,7 +96,7 @@ body {
     transition-duration: 500ms;
 }
 
-.button-win-op {
+.op {
     cursor: pointer;
     font-size: 30px;
     font-family: 'Monoton', cursive;
@@ -111,7 +106,11 @@ body {
     border: #2a2525 solid 2px;
 }
 
-.button-win-op:hover {
+.op:hover {
     background-color: #536767;
     transition-duration: 500ms;
+}
+
+input:focus {
+    outline: none;
 }
