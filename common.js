@@ -43,8 +43,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 outputText.innerText = 'No number!'
             }
         })
-
-
     }
     setTimeout(logicButton, 1000)
 

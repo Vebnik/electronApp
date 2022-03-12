@@ -4,7 +4,6 @@ const path = require('path')
 // Абсолютный путь до директории \ файла
 const pathDir = path.join(__dirname, 'index.html')
 const pathMedia = path.join(__dirname, 'media')
-const pathJs = path.join(__dirname, 'js')
 
 function createWindow() {
 
@@ -16,7 +15,7 @@ function createWindow() {
         hasShadow: true,
         webPreferences: {
             nodeIntegration: true,
-            devTools: true,
+            devTools: false,
             preload: path.join(__dirname, 'common.js'),
         }
     });
@@ -32,8 +31,6 @@ function createWindow() {
 
     win.setIcon(path.join(pathMedia, 'mailservice.png'))
 }
-
-
 app.on(`ready`, () => {
     createWindow();
     console.log('Init window')
